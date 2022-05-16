@@ -6,3 +6,5 @@
 Le Bluetooth est activé le microcontrôleur tente de se connecter à la base.</br>
 Une fois la connexion établie, le microcontrôleur attend de recevoir l'heure depuis la base</br>
 Une fois l'heure reçue, le microcontrôleur transfert tous les fichiers se trouvant à la racine de la carte SD à la base</p>
+<h2>Montage du système :</h2>
+<img src="https://i.ibb.co/Dpgjx95/IMG-20220516-161056.jpg">
