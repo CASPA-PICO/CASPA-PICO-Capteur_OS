@@ -11,7 +11,7 @@
   Lorsque le capteur est branché à la base, le programme débute le transfert.<br/>
 Le Bluetooth est activé le microcontrôleur tente de se connecter à la base.</br>
 Une fois la connexion établie, le microcontrôleur attend de recevoir l'heure depuis la base</br>
-Une fois l'heure reçue, le microcontrôleur transfert tous les fichiers se trouvant à la racine de la carte SD à la base.</p>
+Une fois l'heure reçue, le microcontrôleur transfère tous les fichiers se trouvant à la racine de la carte SD à la base.</p>
 <h2>Configuration du programme</h2>
 <p>Certains fichiers .h sont modifiables afin de changer la configuration du programme :
 <ul>
