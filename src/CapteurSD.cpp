@@ -4,6 +4,10 @@ CapteurSD::CapteurSD() {
 
 }
 
+/**
+ * Initialise la carte micro SD
+ * @return True en cas de succès, False en cas d'échec
+ */
 bool CapteurSD::init() {
 	if(!SD.begin(SS, SPI, 4000000, "/sd", 5, false)){
 #ifdef DEBUG_SD
@@ -43,6 +47,10 @@ bool CapteurSD::init() {
 	return true;
 }
 
+/**
+ * Vérifie si des données sont prêtes à être transférées
+ * @return True si des fichiers peuvent être transférés, False sinon
+ */
 bool CapteurSD::dataAvailable() {
 	File root = SD.open("/");
 	if(!root){
@@ -78,6 +86,9 @@ void CapteurSD::end() {
 	SD.end();
 }
 
+/**
+ * Démarrage de la lecture des fichiers depuis la carte micro SD
+ */
 void CapteurSD::startReadingFiles() {
 	if(root.available()){
 		root.close();
@@ -85,6 +96,10 @@ void CapteurSD::startReadingFiles() {
 	root = SD.open("/");
 }
 
+/**
+ * Ouvre le prochain fichier à la racine de la carte micro SD
+ * @return Renvoie un fichier
+ */
 File CapteurSD::openNextFile() {
 	File file = root.openNextFile();
 	while(file && file.isDirectory()){
